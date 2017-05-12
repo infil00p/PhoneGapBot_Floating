@@ -6,11 +6,11 @@
     <meta name="description" content="Hello, World! - A-Frame">
     <script src="js/aframe-v0.5.0.min.js"></script>
     <script src="js/aframe-animation-component.min.js"></script>
-
+    <script src="js/webvr-ui.min.js"></script>
     <script src="bot/bot-component.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene webvr-ui>
       <a-entity id="bot" buildbot position="0 0 -5" rotation=" 0 -90 0"
         animation="property: position; startEvents: botmove; dur: 8000; from: 0 0 -5; to: 0 0 -5">
         <a-animation begin="botspin" attribute="rotation" dur="10000" to="0 270 0"></a-animation>
