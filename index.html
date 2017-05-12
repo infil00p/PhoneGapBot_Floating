@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="js/aframe-v0.5.0.min.js"></script>
+    <script src="js/aframe-animation-component.min.js"></script>
+
+    <script src="bot/bot-component.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity id="bot" buildbot position="0 0 -5" rotation=" 0 -90 0"
+        animation="property: position; startEvents: botmove; dur: 8000; from: 0 0 -5; to: 0 0 -5">
+        <a-animation begin="botspin" attribute="rotation" dur="10000" to="0 270 0"></a-animation>
+      </a-entity>
+      <a-sky src="images/AdobeStock_121784785.jpeg"></a-sky>
+      <a-entity id="fpv" position="0 0 0">
+        <a-camera></a-camera>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
